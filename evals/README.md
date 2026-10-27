@@ -24,6 +24,7 @@ One runbook per catalogued skill. The table is generated from [`catalog.yaml`](.
 |-------|---------|
 | docker-project-foundations | [docker-project-foundations.md](docker-project-foundations.md) |
 | docker-build-strategies | [docker-build-strategies.md](docker-build-strategies.md) |
+| docker-dhi-migration | [docker-dhi-migration.md](docker-dhi-migration.md) |
 | docker-compose-patterns | [docker-compose-patterns.md](docker-compose-patterns.md) |
 | docker-sandboxes-lifecycle | [docker-sandboxes-lifecycle.md](docker-sandboxes-lifecycle.md) |
 | docker-sandboxes-network-credentials | [docker-sandboxes-network-credentials.md](docker-sandboxes-network-credentials.md) |

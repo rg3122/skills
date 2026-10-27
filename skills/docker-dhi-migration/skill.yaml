@@ -1,0 +1,20 @@
+schema: v1
+id: docker-dhi-migration
+version: 0.1.0
+title: Docker Hardened Images Migration
+description: Migrate existing Dockerfiles to Docker Hardened Images while preserving application behavior, verifying compatibility, and validating builds.
+owns:
+  - docker-hardened-images-migration
+  - dhi-base-image-selection
+  - dhi-dockerfile-compatibility
+use_when:
+  - The user wants to migrate an existing Dockerfile or container image to Docker Hardened Images (DHI).
+  - The task is to identify DHI equivalents for existing base images or resolve DHI compatibility issues.
+  - The user asks how to adapt a Dockerfile for a hardened or minimal runtime image.
+do_not_use_when:
+  - The user only asks general questions about DHI without changing a Dockerfile; use docker-docs to retrieve current official documentation.
+  - The task is primarily general Dockerfile optimization unrelated to DHI migration; use docker-build-strategies.
+  - The task is about configuring or publishing a Docker Agent agent.yaml rather than migrating container images.
+delegates_to:
+  - docker-build-strategies
+  - docker-docs

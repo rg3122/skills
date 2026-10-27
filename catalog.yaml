@@ -123,6 +123,11 @@ skills:
     path: skills/docker-build-strategies
     version: 0.1.3
     status: stable
+  - id: docker-dhi-migration
+    product: docker-build
+    path: skills/docker-dhi-migration
+    version: 0.1.0
+    status: experimental
   - id: docker-compose-patterns
     product: docker-compose
     path: skills/docker-compose-patterns

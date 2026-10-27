@@ -16,6 +16,10 @@
 /skills/docker-build-strategies/ @docker/compose-maintainers @docker/gordon
 /evals/docker-build-strategies.md @docker/compose-maintainers @docker/gordon
 
+# Docker Hardened Images migration
+/skills/docker-dhi-migration/ @docker/compose-maintainers @docker/gordon
+/evals/docker-dhi-migration.md @docker/compose-maintainers @docker/gordon
+
 # Docker Agent skills and evaluations
 /skills/docker-agent-*/ @docker/ai-agent-team @docker/gordon
 /evals/docker-agent-*.md @docker/ai-agent-team @docker/gordon

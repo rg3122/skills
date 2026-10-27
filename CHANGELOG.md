@@ -10,6 +10,10 @@ for distribution releases.
 
 ### Added
 
+- Added the experimental `docker-dhi-migration` skill to guide Dockerfile migrations
+  to Docker Hardened Images using official migration information, compatibility checks,
+  and explicit build/runtime validation.
+
 - Added the experimental `docker-docs` skill. It answers questions about any
   Docker product from current, cited Docker Docs pages. It uses the Docker docs
   MCP search tool when one is available. Otherwise it falls back to

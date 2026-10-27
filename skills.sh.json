@@ -7,7 +7,8 @@
       "description": "Containerize a project and write, optimize, and harden Dockerfiles and images.",
       "skills": [
         "docker-project-foundations",
-        "docker-build-strategies"
+        "docker-build-strategies",
+        "docker-dhi-migration"
       ]
     },
     {
