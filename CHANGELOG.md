@@ -20,6 +20,10 @@ for distribution releases.
   (`https://ai-backend-service.docker.com/mcp`) for Claude Code, Codex, Cursor,
   GitHub Copilot CLI, and Gemini CLI installations.
 
+### Fixed
+
+- Fixed `docker-build-strategies` non-root verification so it inspects the configured user first and uses `--entrypoint id` for an optional runtime UID check. This avoids passing `whoami` to an image's configured application entrypoint.
+
 ## [0.3.1] - 2026-09-29
 
 ### Added

@@ -48,19 +48,21 @@ Use `docker history test-image` to identify which layers are largest.
 
 ## 3. Runs as non-root
 
-```bash
-docker run --rm test-image whoami
-```
-
-Expected output: `appuser`, `nonroot`, or another non-root username. Must not return `root`.
-
-If the image does not have `whoami` (e.g., distroless), verify with:
+First inspect the user configured in the image. This works even when the image has an `ENTRYPOINT` that would otherwise consume `whoami` as an application argument:
 
 ```bash
 docker inspect test-image --format '{{.Config.User}}'
 ```
 
-The output must be non-empty and must not be `0` or `root`.
+The `Config.User` value may be `user[:group]` or `uid[:gid]`. Check the part before `:`: it must be non-empty and must not be `root` or `0`; a numeric UID must be greater than `0`. An empty value means Docker defaults to root and fails this check.
+
+When the image includes `id`, optionally verify the effective runtime UID as well. Override the image entrypoint so the command is executed rather than passed to the application:
+
+```bash
+docker run --rm --entrypoint id test-image -u
+```
+
+Expected output is a numeric UID greater than `0`. This runtime check may not be available in minimal or distroless images; in that case, use the configured-user inspection above.
 
 ## 4. No secrets in image
 
